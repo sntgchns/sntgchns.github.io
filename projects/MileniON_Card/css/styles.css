@@ -29,7 +29,7 @@ section::before
     left: 40%;
     width: 600px;
     height: 600px;
-    background: linear-gradient(#f00,#f0f);
+    background: linear-gradient(#A147ED,#CD38B6);
     border-radius: 50%;
 }
 .card

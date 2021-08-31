@@ -8,8 +8,8 @@
 body
 {
     display: flex;
-    justify-content: center;
-    align-items: stretch;
+    justify-content: justify;
+    align-items: center;
     min-height: 100vh;
     background: #061D39;
     overflow: hidden;

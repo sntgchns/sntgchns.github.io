@@ -11,12 +11,11 @@
     align-items: center;
     min-height: 100vh;
     background: #061D39;
+    overflow: hidden;
 }
 ul
 {
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 ul li
 {

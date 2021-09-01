@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corner Text Parallax Effects</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section>
+        <div class="skew1">
+            <h2 class="layer">Santiago Soñora</h2>
+        </div>
+        <div class="textBox">            
+        <div class="skew2">
+            <h2 class="layer">Santiago Soñora</h2>
+        </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('mousemove', parallaxText);
+        function parallaxText(e)
+        {
+            this.querySelectorAll('.layer').forEach(layer => {
+                let x = (window.innerWidth - e.pageX * 2)/2;
+                layer.style.transform = `translateX(${x}px)`;
+            })
+        }
+    </script>
+</body>
+</html>

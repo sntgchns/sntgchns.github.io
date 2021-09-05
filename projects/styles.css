@@ -33,7 +33,7 @@ ul li a
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 2px;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 0 10px;
     line-height: 1.2em;
 }
@@ -80,7 +80,7 @@ h1
 {
     color: #ffc456;    
     letter-spacing: 2px;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 0 10px;
     line-height: 1.2em;
 }

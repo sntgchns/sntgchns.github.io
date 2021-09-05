@@ -17,7 +17,6 @@ body
 ul
 {
     position: relative;
-    display: flex;
     flex-direction: column;
 }
 ul li
@@ -35,7 +34,7 @@ ul li a
     letter-spacing: 2px;
     font-size: 1em;
     padding: 0 10px;
-    line-height: 1.2em;
+    line-height: 1em;
 }
 ul li a:before
 {

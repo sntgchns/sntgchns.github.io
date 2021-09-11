@@ -91,6 +91,7 @@ body{
     outline: none;
     width: 100%;
     font-size: 1.5em;
+    text-transform: capitalize;
 }
 form
 {
@@ -101,6 +102,10 @@ form
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+}
+#name
+{    
+    text-transform: capitalize;
 }
 .inputBox span
 {

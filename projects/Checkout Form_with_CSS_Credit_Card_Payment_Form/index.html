@@ -5,7 +5,7 @@
     <link rel="icon" href="../img/S.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Form with CSS | Credit Card Payment Form</title>
+    <title>Formulario Ingreso de Método de Pago</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -14,20 +14,20 @@
             <div class="card">
                 <img src="img/chip.png" alt="Chip" class="chip">
                     <div class="logo"></div>
-                    <h2 class="bankName" contenteditable="true">Bank Name</h2>
+                    <h2 class="bankName" contenteditable="true">Banco</h2>
                     <form action="">
                         <div class="inputBox">
-                            <span>Card No.</span>
+                            <span>Tarjeta N°.</span>
                             <input id="iban" type="text" placeholder="0123 4567 8901 2345" maxlength="19">
                         </div>
                         <div class="inputBox">
-                            <span>Card Holder</span>
+                            <span>Usuario</span>
                             <input id="name" type="text" placeholder="Santiago Soñora">
                         </div> 
                         <div class="group">
                             <div class="inputBox">
-                            <span>Valid Thru</span>
-                            <input id="exp" onkeypress="myFunction()" type="text" placeholder="MM/YY" maxlength="5">
+                            <span>Válida hasta</span>
+                            <input id="exp" onkeypress="myFunction()" type="text" placeholder="MM/AA" maxlength="5">
                         </div>
                         <div class="inputBox">
                             <span>CCV</span>
@@ -36,7 +36,7 @@
             </div>
                     </form>
         </div>
-        <button class="btn">Confirm and Pay</button>
+        <button class="btn">Confirmar y Pagar</button>
     </div>
     <script>
     document.getElementById('iban').addEventListener('input', function (e) {

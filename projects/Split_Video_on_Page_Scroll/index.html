@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Video on Page Scroll</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section>
+        <div class="side" id="side1">
+            <video src="img/bg.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+        <div class="side" id="side2">
+            <video src="img/bg.mp4" type="video/mp4" autoplay loop muted></video>
+        </div>
+    </section>
+    <div class="content">
+        <h2>Split Video on Page Scroll</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quia ipsa quos harum exercitationem corporis ab unde quod. Blanditiis nisi adipisci eius esse praesentium! Corporis incidunt voluptates harum neque laborum.
+        Consequatur at veniam in ut accusamus placeat ipsa eaque? Numquam aspernatur officiis eaque nam fugiat esse quis molestias minus? Corrupti voluptatem, praesentium sunt magnam magni consectetur a eligendi odio porro?
+        Officia itaque error quo mollitia consequatur? Unde omnis non et officiis tenetur totam temporibus, quasi rem error esse nam obcaecati nemo odit earum, quam fugiat dolores ad recusandae explicabo? Similique!
+        Laboriosam ipsam, vel incidunt, iure dignissimos fugit tempora commodi magni perferendis sequi eum, illum culpa rem? Molestias temporibus, possimus magnam error laborum natus numquam voluptatibus repellat enim sint voluptatem eligendi.
+        Repellendus rem excepturi fugiat accusamus praesentium hic ex eaque? Aliquid suscipit non fugit mollitia recusandae soluta. Sunt, quo fuga minus delectus ab architecto dolores iste nesciunt amet culpa? Porro, doloremque.</p>
+    </div>
+    <script>
+        let side1 = document.getElementById('side1');
+        let side2 = document.getElementById('side2');
+        window.addEventListener('scroll', function(){
+            side1.style.left = -window.pageYOffset+'px';
+            side2.style.left = window.pageYOffset+'px';
+        })
+    </script>
+</body>
+</html>

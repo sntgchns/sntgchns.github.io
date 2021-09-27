@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/S.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Rocket on Mousemove</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="rocket">
+            <img src="img/rocket.png" alt="Rocket">
+        </div>
+    </div>
+    <script>
+        document.addEventListener('mousemove', function(e){
+            var rocket = document.querySelector('.rocket');
+            rocket.style.left = e.offsetX + 'px';
+            rocket.style.top = e.offsetY + 'px';
+        })
+        function stars(){
+            let count = 20;
+            let scene = document.querySelector('.scene');
+            let i = 0;
+            while(i < count){
+                let star = document.createElement('i');
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let duration = Math.random() * 1;
+                let h = Math.random() * 100;
+                star.style.left = x + 'px';
+                star.style.width = 1 + 'px';
+                star.style.height = 50 + h + 'px';
+                star.style.animationDuration = duration + 's';
+                scene.appendChild(star);
+                i++
+            }
+        }
+        stars();
+    </script>
+</body>
+</html>

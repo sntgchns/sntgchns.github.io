@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/S.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Effects</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <section class="sec">
+        <video src="img/bg.mp4" type="video/mp4" autoplay muted loop></video>
+        <h2>Run</h2>
+        <div class="dot"></div>
+    </section>
+    <script>
+        const dot = document.querySelector('.dot');
+        const sec = document.querySelector('.sec');
+        dot.onclick = function(){
+            dot.classList.toggle('active')
+            sec.classList.toggle('active')
+        }
+        document.addEventListener("mousemove", function(e){
+            const dot = document.querySelector('.dot');
+            dot.style.left = e.pageX + 'px';
+            dot.style.top = e.pageY + 'px';
+        })
+    </script>
+</body>
+</html>

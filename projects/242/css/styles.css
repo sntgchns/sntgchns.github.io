@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+:root {
+	--cream: hsl(38 47% 75%);
+	--black: hsl(20 3% 19%);
+	--red: #ea6962;
+	--orange: #e78a4e;
+	--yellow: #d8a657;
+	--green: #a9b665;
+	--aqua: #89b482;
+	--ff: 'Luckiest Guy', cursive;
+}
+
+html {
+	font-family: var(--ff);
+	font-size: 100%;
+	block-size: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	text-rendering: optimizeSpeed;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-weight: 400;
+	block-size: 100%;
+	padding: 5vw;
+	background-color: var(--black);
+	color: var(--cream);
+}
+
+h1, h2 {
+	font-weight: inherit;
+}
+
+h1 {	
+	font-size: clamp(0.875rem, 0.6875rem + 0.8333vw, 1.125rem);
+	line-height: 1.2;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	text-align: center;
+	inline-size: max-content;
+	aspect-ratio: 1;
+	position: relative;
+	isolation: isolate;
+	display: grid;
+	place-content: center;
+	background-color: var(--cream);
+	color: var(--black);
+	border-radius: 30% 70% 58% 42% / 27% 41% 59% 73%;
+	box-shadow: 
+		8px -8px 0 var(--red), 
+		-8px -6px 0 var(--orange), 
+		0 8px 0 var(--yellow);
+}
+
+h1 span {
+	display: block;
+	font-size: clamp(1.125rem, 0.4688rem + 2.9167vw, 2rem);
+}
+
+h1::before, h1::after {
+	content: "";
+	position: absolute;
+}
+
+h1::before {
+	top: 5%;
+	left: 8%;
+	inline-size: 30%;
+	block-size: 30%;
+	background-color: var(--black);
+	border-radius: 43% 57% 51% 49% / 37% 53% 47% 63%;
+	box-shadow: inset -5px 0 0 5px var(--yellow);
+}
+
+h1::after {
+	bottom: -15%;
+	right: 15%;
+	inline-size: 15%;
+	block-size: 15%;
+	background-color: var(--cream);
+	border-radius: 65% 35% 64% 36% / 44% 37% 63% 56%;
+	box-shadow: inset -2px 0 0 2px var(--red);
+}
+
+h2, h2 + p {
+	margin-inline-start: clamp(1rem, -6.3333rem + 32.5926vw, 12rem);
+}
+
+h2 {
+	font-size: clamp(1rem, 0.6250rem + 1.6667vw, 1.5rem);
+	line-height: 2.5;
+	display: grid;
+	margin-block: 2rem;
+}
+
+h2 span {
+	font-size: clamp(2.5rem, -0.1250rem + 11.6667vw, 6rem);
+	line-height: .8;
+	max-inline-size: 12ch;
+	padding-block-start: 1rem;
+	position: relative;
+	isolation: isolate;
+	background: linear-gradient(to right, var(--aqua), var(--aqua) 10%, var(--green), var(--yellow), var(--orange));
+	background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 span::before {
+	content: "";
+	position: absolute;
+	top: -50%;
+	right: 20%;
+	inline-size: 10%;
+	aspect-ratio: 1;
+	background-color: var(--yellow);
+	border-radius: 65% 35% 64% 36% / 44% 37% 63% 56%;
+}
+
+h2 + p {
+	font-size: 1rem;
+	line-height: 1;
+	max-inline-size: 28ch;
+	position: relative;
+	isolation: isolate;
+	color: var(--green)
+}
+
+h2 + p::before {
+	content: "";
+	position: absolute;
+	bottom: -100%;
+	left: 20%;
+	inline-size: 10%;
+	aspect-ratio: 1;
+	background-color: var(--green);
+	border-radius: 65% 35% 64% 36% / 44% 37% 63% 56%;
+}

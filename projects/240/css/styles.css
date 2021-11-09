@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;900&subset=latin&display=swap');
+
+:root {
+	--cream: hsl(38 47% 75%);
+	--black: hsl(20 3% 19%);
+	--red: #ea6962;
+	--orange: #e78a4e;
+	--yellow: #d8a657;
+	--green: #a9b665;
+	--aqua: #89b482;
+	--ff: "Rubik", sans-serif;
+}
+
+html {
+	font-family: var(--ff);
+	font-size: 100%;
+	block-size: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	text-rendering: optimizeSpeed;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	block-size: 100%;
+	padding: 5vw;
+	background-color: var(--cream);
+	color: var(--black);
+}
+
+div {
+	max-inline-size: 32rem;
+	margin-inline: auto;
+	display: grid;
+	background: linear-gradient(to top, var(--aqua), 
+		var(--aqua) 2rem, 
+		var(--green) 2rem, 
+		var(--green) 4rem,
+		var(--yellow) 4rem,
+		var(--yellow) 6rem,
+		var(--orange) 6rem,
+		var(--orange) 8rem,
+		var(--red) 8rem,
+		var(--red) 10rem,
+		var(--cream) 10rem);
+	box-shadow:
+		0 2.8px 2.2px hsl(20 3% 19% / 0.02),
+		0 6.7px 5.3px hsl(20 3% 19% / 0.028),
+		0 12.5px 10px hsl(20 3% 19% / 0.035),
+		0 22.3px 17.9px hsl(20 3% 19% / 0.042),
+		0 41.8px 33.4px hsl(20 3% 19% / 0.05),
+		0 100px 80px hsl(20 3% 19% / 0.07);
+}
+
+div > * {
+	padding: 1rem;
+}
+
+h1 {
+	align-self: start;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	display: grid;
+	position: relative;
+	isolation: isolate;
+	background: linear-gradient(to right, var(--black), var(--black) 14rem, var(--yellow) 14rem);
+	color: var(--yellow);
+}
+
+h1 span {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+h1::before, h1::after {
+	content: "";
+	position: absolute;
+	width: 4rem;
+	height: 100%;
+	top: 0;
+}
+
+h1::before {
+	background-color: var(--red);
+	left: 12rem;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 50% 50%);
+	
+}
+
+h1::after {
+	background-color: var(--orange);
+	left: 14rem;
+	clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%, 50% 50%);
+}
+
+h2 {
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: 1;
+	text-transform: uppercase;
+	display: grid;
+	padding-block: 10vh 20vh;
+}
+
+h2 span:first-child {
+	font-size: 7.5rem;
+	font-weight: 900;
+}
+
+h2 span:last-child {
+	font-size: 1.5rem;
+	max-inline-size: 10ch
+}
+
+h2 + p {
+	align-self: end;
+	font-size: .875rem;
+	font-weight: 500;
+	line-height: 1.1;
+	max-inline-size: 28ch;
+	position: relative;
+	isolation: isolate;
+	background-color: var(--aqua);
+}
+
+h2 + p::before {
+	content: "";
+	position: absolute;
+	width: 4rem;
+	height: 100%;
+	top: 0;
+	left: 14rem;
+	background-color: inherit;
+	clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%);
+	z-index: -1;
+}

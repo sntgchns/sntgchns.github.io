@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@400;900&display=swap');
+
+:root {
+	--cream: hsl(38 47% 75%);
+	--black: hsl(20 3% 19%);
+	--red: hsl(3 76% 65%);
+	--orange: #e78a4e;
+	--yellow: #d8a657;
+	--green: #a9b665;
+	--aqua: #89b482;
+	--ff: 'Big Shoulders Inline Display', cursive;
+}
+
+html {
+	font-family: var(--ff);
+	font-size: 100%;
+	block-size: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	text-rendering: optimizeSpeed;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-weight: 900;
+	block-size: 100%;
+	padding: 5vw;
+	display: grid;
+	gap: 2px;
+	place-content: center;
+	background-color: var(--cream);
+}
+
+body > * {
+	padding: 2rem;
+	background-color: var(--black);
+	box-shadow: 8px 8px var(--red), 16px 16px var(--orange), 24px 24px var(--green);
+}
+
+h1, h2 {
+	font-weight: inherit;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: clamp(1.5rem, 6vw, 3rem);
+	position: relative;
+	z-index: -1;
+	color: var(--aqua);
+	border-radius: 3rem 3rem 0 3rem;
+}
+
+h1::before, h1::after {
+	content: "";
+	position: absolute;
+	top: -1rem;
+	width: 2rem;
+	height: 2rem;
+	background-color: var(--cream);
+	border-radius: 100%;
+}
+
+h1::before {	
+	left: 1rem;
+}
+
+h1::after {
+	left: 2.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+h2 {
+	font-size: clamp(2rem, 8vw, 4rem);
+	line-height: 1;
+	color: var(--yellow);
+	border-radius: 3rem 0;
+	box-shadow: 8px 6px var(--red), 16px 14px var(--orange), 24px 22px var(--green);
+}
+
+h2 span {
+	font-size: clamp(3rem, 12vw, 6rem);
+	display: block;
+}
+
+h2 + p {
+	font-size: clamp(1.25rem, 4vw, 1.5rem);
+	max-inline-size: 40ch;
+	color: var(--red);
+	border-radius: 0 3rem 3rem 3rem;
+}

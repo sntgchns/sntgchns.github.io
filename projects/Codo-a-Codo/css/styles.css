@@ -618,7 +618,7 @@ p
     }
     .principal.active
     {
-        left: 100%;
+        left: -360px;
     }
     .principal .superior
     {

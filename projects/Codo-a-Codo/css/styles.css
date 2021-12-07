@@ -600,3 +600,34 @@ p
         padding: 10px 20px;
     }
 }
+@media (max-width: 480px)
+{    
+    .selector
+    {
+        height: 50%;
+    }
+    .intereses .contenido
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .habilidades .contenido
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .testimonials .contenido
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contacto .formulario .fila
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contacto
+    {
+        margin-bottom: 100px;
+    }
+    .copyright
+    {
+        padding: 10px 20px;
+    }
+}

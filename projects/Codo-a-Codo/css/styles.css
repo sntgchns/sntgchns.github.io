@@ -600,11 +600,15 @@ p
 {
     .selector ul
     {
-        height: 65%
+        height: 65%;
+    }
+    .principal.active
+    {
+        left: 100%;
     }
     .principal .superior.active
     {
-        left: -350px;
+        left: -370px;
     }
 }
         

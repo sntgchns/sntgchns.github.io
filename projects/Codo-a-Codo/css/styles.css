@@ -598,13 +598,10 @@ p
 }
 @media (max-width: 480px)
 {    
-    .selector
+    .selector.active
     {
         height: 50%;
-    }
-    .principal .superior .toggle 
-    {
-    padding-right: 380px;
+        right: 350px;
     }
     .intereses .contenido
     {

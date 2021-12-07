@@ -606,6 +606,12 @@ p
     {
         height: 65%;
     }
+    .selector ul li a
+    {
+        padding: 12px;
+        font-size: 26px;
+        letter-spacing: 10px;
+    }
     .selector.active ul li a
     {
         padding: 12px;

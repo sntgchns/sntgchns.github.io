@@ -612,6 +612,10 @@ p
         font-size: 26px;
         letter-spacing: 10px;
     }
+    .selector.active ul li a:hover
+    {
+        opacity: 1;
+    }
     .selector.active
     {
         left: 0;

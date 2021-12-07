@@ -602,13 +602,34 @@ p
     {
         height: 65%;
     }
+    .selector
+    {
+        left: -100%;
+    }
+    .selector.active
+    {
+        left: 0;
+        width: 100%;
+    }
+    .principal
+    {
+        width: 100%;
+        left: 0;
+    }
     .principal.active
     {
         left: 100%;
     }
+    .principal .superior
+    {
+        width: 100%;
+        left: 0;
+    }
     .principal .superior.active
     {
-        left: -370px;
+        width: 100%;
+        left: 0;
+        padding: 0 20px;
     }
 }
         

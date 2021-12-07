@@ -570,11 +570,7 @@ p
     }
 }
 @media (max-width: 767px)
-{    
-    .selector
-    {
-        height: 50%;
-    }
+{
     .intereses .contenido
     {
         grid-template-columns: repeat(1,1fr);
@@ -605,6 +601,10 @@ p
     .selector
     {
         height: 50%;
+    }
+    .principal .superior .toggle 
+    {
+    padding-right: 380px;
     }
     .intereses .contenido
     {

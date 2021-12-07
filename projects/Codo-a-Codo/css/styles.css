@@ -596,3 +596,15 @@ p
         padding: 10px 20px;
     }
 }
+@media (max-width: 480px)
+{
+    .selector ul
+    {
+        height: 65%
+    }
+    .principal .superior.active
+    {
+        left: -350px;
+    }
+}
+        

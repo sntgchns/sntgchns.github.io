@@ -598,13 +598,19 @@ p
 }
 @media (max-width: 480px)
 {
+    .selector
+    {
+        left: -100%;
+    }
     .selector ul
     {
         height: 65%;
     }
-    .selector
+    .selector ul li a
     {
-        left: -100%;
+        padding: 12px;
+        font-size: 26px;
+        letter-spacing: 10px;
     }
     .selector.active
     {

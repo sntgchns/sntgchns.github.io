@@ -620,6 +620,9 @@ p
     }
     .selector.active ul li a:hover
     {
+        padding: 12px;
+        font-size: 26px;
+        letter-spacing: 10px;
         opacity: 1;
     }
     .selector.active
@@ -640,6 +643,7 @@ p
     {
         width: 100%;
         left: 0;
+        padding: 0 20px;
     }
     .principal .superior.active
     {

@@ -606,7 +606,7 @@ p
     {
         height: 65%;
     }
-    .selector ul li a
+    .selector.active ul li a
     {
         padding: 12px;
         font-size: 26px;

@@ -1,0 +1,53 @@
+a[data-tooltip] {
+	display: inline-block;/*bug fix*/
+	position: relative;
+	text-decoration: none;
+}
+a[data-tooltip]:after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: 130%;
+	left: 20%;
+	background: #f00;
+	padding: 5px 15px;
+	color: black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+	white-space: nowrap;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+a[data-tooltip]:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 20px solid #f00;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	opacity: 0;
+	left: 30%;
+	bottom: 90%;
+}
+a[data-tooltip]:hover:after {
+	bottom: 100%;
+}
+a[data-tooltip]:hover:before {
+	bottom: 70%;
+}
+a[data-tooltip]:hover:after,
+a[data-tooltip]:hover:before {
+	opacity: 1;
+}

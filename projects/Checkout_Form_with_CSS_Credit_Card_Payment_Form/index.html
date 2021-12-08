@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/S.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Ingreso de Método de Pago</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="payment">
+        <div class="bg"></div>
+            <div class="card">
+                <img src="img/chip.png" alt="Chip" class="chip">
+                    <div class="logo"></div>
+                    <h2 class="bankName" contenteditable="true">Banco</h2>
+                    <form action="">
+                        <div class="inputBox">
+                            <span>Tarjeta N°.</span>
+                            <input id="iban" type="text" placeholder="0123 4567 8901 2345" maxlength="19">
+                        </div>
+                        <div class="inputBox">
+                            <span>Usuario</span>
+                            <input id="name" type="text" placeholder="Santiago Soñora">
+                        </div> 
+                        <div class="group">
+                            <div class="inputBox">
+                            <span>Válida hasta</span>
+                            <input id="exp" onkeypress="myFunction()" type="text" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="inputBox">
+                            <span>CCV</span>
+                            <input type="password" placeholder="***" maxlength="4">
+                        </div>
+            </div>
+                    </form>
+        </div>
+        <button class="btn">Confirmar y Pagar</button>
+    </div>
+    <script>
+    document.getElementById('iban').addEventListener('input', function (e) {
+  e.target.value = e.target.value.replace(/[^\dA-Z]/g, '').replace(/(.{4})/g, '$1 ').trim();
+});
+    </script>
+    <script>
+        function myFunction() {
+	var expire_date = document.getElementById('exp').value;
+	if(expire_date.length == 2){
+		 document.getElementById('exp').value = expire_date +'/';
+	}
+}
+        </script>
+</body>
+</html>

@@ -59,34 +59,34 @@ body
 }
 @keyframes animate2
 100% {
-    transform: translateX(-495px) scale(0.75);
+    transform: translateX(-30vw) scale(0.75);
 }
 90% {
-    transform: translateX(-445.5px) scale(0.85);
+    transform: translateX(-27vw) scale(0.85);
 }
 80% {
-    transform: translateX(-396px) scale(0.95);
+    transform: translateX(-24vw) scale(0.95);
 }
 70% {
-    transform: translateX(-346.5px) scale(1.05);
+    transform: translateX(-21vw) scale(1.05);
 }
 60% {
-    transform: translateX(-297px) scale(1.15);
+    transform: translateX(-18vw) scale(1.15);
 }
 50% {
-    transform: translateX(-247.5px) scale(1.25);
+    transform: translateX(-15vw) scale(1.25);
 }
 40% {
-    transform: translateX(-198px) scale(1.15);
+    transform: translateX(-12vw) scale(1.15);
 }
 30% {
-    transform: translateX(-148.5px) scale(1.05);
+    transform: translateX(-9vw) scale(1.05);
 }
 20% {
-    transform: translateX(-99px) scale(0.95);
+    transform: translateX(-6vw) scale(0.95);
 }
 10% {
-    transform: translateX(-49.5px) scale(0.85);
+    transform: translateX(-3vw) scale(0.85);
 }
 0% {
     transform: translateX(0) scale(0.75);

@@ -55,7 +55,7 @@ body
     width: 6.954612005856515vw;
     border-radius: 50%;
     background:  linear-gradient(#07E2FB,#A712F3);
-    animation: animate2 5s cubic-bezier(0.33, 0, 0.66, 1) infinite;
+    animation: animate2 5s cubic-bezier(1, 1, 1, 1) infinite;
 }
 @keyframes animate2
 100% {

@@ -37,6 +37,26 @@ body
     background:  linear-gradient(#07E2FB,#A712F3);
     animation: animate1 5s cubic-bezier(0.33, 0, 0.66, 1) infinite;
 }
+@keyframes animate1
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(30.01464128843338vw);
+    }
+}
+.moon2
+{
+    z-index: 1;
+    height: 6.954612005856515vw;
+    width: 6.954612005856515vw;
+    border-radius: 50%;
+    background:  linear-gradient(#07E2FB,#A712F3);
+    animation: animate2 5s cubic-bezier(0.33, 0, 0.66, 1) infinite;
+}
 @keyframes animate2
 100% {
     transform: translateX(-495px) scale(0.75);
@@ -72,26 +92,6 @@ body
     transform: translateX(0) scale(0.75);
 }
 /*
-@keyframes animate1
-{
-    0%
-    {
-        transform: translateX(0);
-    }
-    100%
-    {
-        transform: translateX(30.01464128843338vw);
-    }
-}*/
-.moon2
-{
-    z-index: 1;
-    height: 6.954612005856515vw;
-    width: 6.954612005856515vw;
-    border-radius: 50%;
-    background:  linear-gradient(#07E2FB,#A712F3);
-    animation: animate2 5s cubic-bezier(0.33, 0, 0.66, 1) infinite;
-}
 @keyframes animate2
 {
     100%
@@ -102,7 +102,7 @@ body
     {
         transform: translateX(0);
     }
-}
+}*/
 .sun
 {   display: flex;
     height: 23.060029282576867vw;

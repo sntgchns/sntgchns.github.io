@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+body
+{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right,#BFE4F8,#FFE0FF);
+}
+.head
+{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.universe
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planet
+{
+    position: relative;
+}
+.moon1
+{
+    height: 6.954612005856515vw;
+    width: 6.954612005856515vw;
+    border-radius: 50%;
+    background:  linear-gradient(#07E2FB,#A712F3);
+    animation: animate1 5s cubic-bezier(0.33, 0, 0.66, 1) infinite;
+}
+@keyframes animate1
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(30.01464128843338vw);
+    }
+}
+.moon2
+{
+    z-index: 1;
+    height: 6.954612005856515vw;
+    width: 6.954612005856515vw;
+    border-radius: 50%;
+    background:  linear-gradient(#07E2FB,#A712F3);
+    animation: animate2 5s cubic-bezier(0.33, 0, 0.66, 1) infinite;
+}
+@keyframes animate2
+{
+    100%
+    {
+        transform: translateX(-30.01464128843338vw);
+    }
+    0%
+    {
+        transform: translateX(0);
+    }
+}
+.sun
+{   display: flex;
+    height: 23.060029282576867vw;
+    width: 23.060029282576867vw;
+    border-radius: 50%;
+    background-color: #0147FF;
+}
+.selector
+{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 100;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+}
+.sel1
+{
+    margin-top: -490px;
+    width: 255px;
+    height: 22px;
+    border-radius: 25px;
+    box-shadow: inset -10px -10px 5px #C2F0FFc7,
+                inset 8px 8px 5px #FFF;
+}
+.log
+{
+    position: absolute;
+    left: -3px;
+    bottom: -1px;
+}
+.sig
+{
+    position: absolute;
+    left: 9.736456808199122vw;
+    bottom: -1px;
+
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: #41237C;
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+.sel2
+{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 55.63689604685212vw;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+}
+.apps
+{
+    position: absolute;
+    bottom: 10px;
+    transform: scale(0.6);
+}
+.start
+{
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+    font-size: 1.2rem;
+}
+.end
+{
+    position: absolute;
+    left: 610px;
+    bottom: 8px;
+}
+input
+{    
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: transparent;	
+    color: #41237C;
+    border: none;
+    width: 43.19180087847731vw;
+    height: 30px;
+    left: -6vw;
+    font-size: 1.3em;
+}
+input::placeholder 
+{
+    color: #41237C;
+}
+input:focus
+{
+    border: 0px solid #41237C;
+    box-shadow: 0 0 3px #41237C;
+    outline-offset: 0px;
+    outline: none;
+}
+.dropbtn 
+{    
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    color: #41237C;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    top: -22px;
+    left: -6vw;
+}  
+.dropdown 
+{
+    position: absolute;
+    display: inline-block;
+    top: 14px;
+}  
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}  
+.dropdown-content a 
+{
+    color: #41237C;
+    text-decoration: none;
+    display: block;
+}  
+.dropdown-content a:hover 
+{
+	background-color: transparent;
+}
+  
+.dropdown:hover .dropdown-content 
+{
+	display: block;
+    top: 25px;
+    left: -80px;
+}
+  
+.dropdown:hover .dropbtn 
+{
+	background-color: transparent;
+}

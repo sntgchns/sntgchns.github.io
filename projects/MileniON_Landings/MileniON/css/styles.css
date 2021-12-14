@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+body
+{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right,#BFE4F8,#FFE0FF);
+}
+.head
+{
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.universe
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.planet
+{
+    position: relative;
+}
+.moon1
+{
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    background:  linear-gradient(#FF1446,#6F00B5);
+    animation: animate1 5s cubic-bezier(1, 1, 1, 1) infinite;
+}
+@keyframes animate1
+{
+    0%
+    {
+        transform: translateX(0) scale(0.75);
+    }
+    10%
+    {
+        transform: translateX(49.5px) scale(0.65);
+    }
+    20%
+    {
+        transform: translateX(99px) scale(0.55);
+    }
+    30%
+    {
+        transform: translateX(148.5px) scale(0.45);
+    }
+    40%
+    {
+        transform: translateX(198px) scale(0.35);
+    }
+    50%
+    {
+        transform: translateX(247.5px) scale(0.25);
+    }
+    60%
+    {
+        transform: translateX(297px) scale(0.35);
+    }
+    70%
+    {
+        transform: translateX(346.5px) scale(0.45);
+    }
+    80%
+    {
+        transform: translateX(396px) scale(0.55);
+    }
+    90%
+    {
+        transform: translateX(445.5px) scale(0.65);
+    }
+    100%
+    {
+        transform: translateX(495px) scale(0.75);
+    }
+}
+.moon2
+{
+    z-index: 1;
+    height: 95px;
+    width: 95px;
+    border-radius: 50%;
+    background:  linear-gradient(#FF1446,#6F00B5);
+    animation: animate2 5s cubic-bezier(1, 1, 1, 1) infinite;
+}
+@keyframes animate2
+{
+    100%
+    {
+        transform: translateX(-495px) scale(0.75);
+    }
+    90%
+    {
+        transform: translateX(-445.5px) scale(0.85);
+    }
+    80%
+    {
+        transform: translateX(-396px) scale(0.95);
+    }
+    70%
+    {
+        transform: translateX(-346.5px) scale(1.05);
+    }
+    60%
+    {
+        transform: translateX(-297px) scale(1.15);
+    }
+    50%
+    {
+        transform: translateX(-247.5px) scale(1.25);
+    }
+    40%
+    {
+        transform: translateX(-198px) scale(1.15);
+    }
+    30%
+    {
+        transform: translateX(-148.5px) scale(1.05);
+    }
+    20%
+    {
+        transform: translateX(-99px) scale(0.95);
+    }
+    10%
+    {
+        transform: translateX(-49.5px) scale(0.85);
+    }
+    0%
+    {
+        transform: translateX(0) scale(0.75);
+    }
+}
+.sun
+{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background: url(../img/icon.png);
+}
+.selector
+{
+    z-index: 100;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+}
+.sel1
+{
+    margin-top: -490px;
+    width: 255px;
+    height: 22px;
+    border-radius: 25px;
+    box-shadow: inset -5px -7px 10px #a3b1c7,
+                inset 5px 25px 15px #E7EDFE,
+                10px 10px 25px rgba(0, 0, 0, 0.2);
+}
+.log
+{
+    position: absolute;
+    left: -3px;
+    bottom: -1px;
+}
+.sig
+{
+    position: absolute;
+    left: 133px;
+    bottom: -1px;
+
+}
+li
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    color: #41237C;
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+.sel2
+{
+    width: 760px;
+    height: 40px;
+    border-radius: 40px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.25);
+}
+.apps
+{
+    position: absolute;
+    bottom: 10px;
+    transform: scale(0.6);
+}
+.start
+{
+    position: absolute;
+    left: 10px;
+    bottom: 6px;
+    font-size: 1.2rem;
+}
+.end
+{
+    position: absolute;
+    left: 610px;
+    bottom: 8px;
+}
+input
+{    
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: transparent;	
+    color: #41237C;
+    border: none;
+    width: 590px;
+    height: 30px;
+    bottom: 12px;
+    left: -20px;
+    font-size: 1.3em;
+}
+input::placeholder 
+{
+    color: #41237C;
+}
+.dropbtn 
+{    
+    font-family: 'Poppins', sans-serif;
+    background-color: transparent;
+    color: #41237C;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    position: relative;
+    top: 2px;
+}  
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+    top: 14px;
+}  
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}  
+.dropdown-content a 
+{
+    color: #41237C;
+    text-decoration: none;
+    display: block;
+}  
+.dropdown-content a:hover 
+{
+	background-color: transparent;
+}
+  
+.dropdown:hover .dropdown-content 
+{
+	display: block;
+}
+  
+.dropdown:hover .dropbtn 
+{
+	background-color: transparent;
+}

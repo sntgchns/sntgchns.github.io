@@ -37,6 +37,41 @@ body
     background:  linear-gradient(#07E2FB,#A712F3);
     animation: animate1 5s cubic-bezier(0.33, 0, 0.66, 1) infinite;
 }
+@keyframes animate2
+100% {
+    transform: translateX(-495px) scale(0.75);
+}
+90% {
+    transform: translateX(-445.5px) scale(0.85);
+}
+80% {
+    transform: translateX(-396px) scale(0.95);
+}
+70% {
+    transform: translateX(-346.5px) scale(1.05);
+}
+60% {
+    transform: translateX(-297px) scale(1.15);
+}
+50% {
+    transform: translateX(-247.5px) scale(1.25);
+}
+40% {
+    transform: translateX(-198px) scale(1.15);
+}
+30% {
+    transform: translateX(-148.5px) scale(1.05);
+}
+20% {
+    transform: translateX(-99px) scale(0.95);
+}
+10% {
+    transform: translateX(-49.5px) scale(0.85);
+}
+0% {
+    transform: translateX(0) scale(0.75);
+}
+/*
 @keyframes animate1
 {
     0%
@@ -47,7 +82,7 @@ body
     {
         transform: translateX(30.01464128843338vw);
     }
-}
+}*/
 .moon2
 {
     z-index: 1;

@@ -327,7 +327,7 @@ p
 }
 .dark .services .content .serviceBox img
 {
-    filter: hue-rotate(315deg);
+    filter: invert(1);
 }
 .services .content .serviceBox h2
 {

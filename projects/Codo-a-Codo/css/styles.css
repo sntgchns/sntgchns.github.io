@@ -14,6 +14,13 @@
     --white: #fff;
     --white2: #fff;
 }
+.oscuro
+{
+    --black: #fff;
+    --black2:#444;
+    --white: #333;
+    --white2: #444;
+}
 body
 {
     overflow-x: hidden;
@@ -29,11 +36,16 @@ body
     width: 300px;
     height: 100%;
     border-right: 1px solid rgba(0, 0, 0, 0.05);
+    background: var(--white2);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transition: width 0.5s, left 0.5s;
+}
+.oscuro .selector
+{
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
 .selector.active
 {
@@ -101,6 +113,10 @@ body
     align-items: center;
     z-index: 1000;
     transition: width 0.5s, left 0.5s;
+}
+.oscuro .principal .superior
+{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 .principal .superior.active
 {
@@ -177,6 +193,10 @@ p
 {
     color: #777;
 }
+.oscuro p
+{
+    color: var(--black);
+}
 .btn
 {
     position: relative;
@@ -188,6 +208,10 @@ p
     letter-spacing: 1px;
     margin-top: 10px;
     text-decoration: none;
+}
+.oscuro .btn:hover
+{
+    background: #2196f3;
 }
 .RedesSociales
 {
@@ -217,6 +241,10 @@ p
 {
     background: var(--black2);
     color: #fff;
+}
+.oscuro .RedesSociales li a:hover
+{
+    background: #2196f3;
 }
 .ajuste
 {
@@ -289,9 +317,17 @@ p
     align-items: center;
     flex-direction: column;
 }
+.oscuro .intereses .contenido .intBox:hover
+{
+    background: #2196f3;
+}
 .intereses .contenido .intBox img
 {
     max-width: 50px;
+}
+.oscuro .intereses .contenido .intBox img
+{
+    filter: hue-rotate(315deg);
 }
 .intereses .contenido .intBox h2
 {
@@ -359,6 +395,10 @@ p
     transform: translateY(100%);
     transition: 0.5s ease-in-out;
 }
+.oscuro .habilidades .contenido .habBx .textBx
+{
+    background: #444;
+}
 .habilidades .contenido .habBx:hover .textBx
 {    
     transform: translateY(0);
@@ -381,6 +421,10 @@ p
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     padding: 20px;
+}
+.oscuro .testimonials .contenido .testimonialsBox:hover
+{
+    background: #2196f3;
 }
 .testimonials .contenido .testimonialsBox .imgBx
 {
@@ -489,6 +533,10 @@ p
     max-width: 150px;
     border: none;
 }
+.oscuro .contacto .formulario .fila2 input[type="submit"]:hover
+{
+    background: #2196f3;
+}
 .copyright
 {
     position: relative;
@@ -496,8 +544,53 @@ p
     padding: 10px 40px;
     text-align: center;
 }
+.tema
+{
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tema::before
+{
+    content: '\f186';
+    font-family: fontAwesome;
+}
+.oscuro .tema::before
+{
+    content: '\f185';
+    font-family: fontAwesome;
+}
+.tema::after
+{
+    content: 'Modo Oscuro';
+    position: absolute;
+    left: 40px;
+    font-size: 0.7em;
+    color: var(--black);
+    white-space: nowrap;
+    font-weight: 300;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+.oscuro .tema::after
+{
+    content: 'Modo Claro';
+}
 @media (max-width: 992px)
 {
+    .tema
+    {
+        left: 20px;
+    }
     .selector
     {
         left: -100%;
@@ -517,11 +610,6 @@ p
         left: 100%;
     }
     .principal .superior
-    {
-        width: 100%;
-        left: 0;
-    }
-    .principal .superior.active
     {
         width: 100%;
         left: 0;

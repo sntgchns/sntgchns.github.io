@@ -19,6 +19,7 @@
                 <li><a href="#habilidades" onclick="toggleMenu();">Habilidades</a></li>
                 <li><a href="#contacto" onclick="toggleMenu();">Contacto</a></li>
             </ul>
+            <div class="tema"></div>
         </div>
         <div class="principal">
             <div class="superior">
@@ -240,12 +241,17 @@
         let toggle = document.querySelector('.toggle');
         let superior = document.querySelector('.superior');
         let selector = document.querySelector('.selector');
-        let principal = document.querySelector('.principal');
+        let principal = document.querySelector('.principal');        
+        let tema = document.querySelector('.tema');
+        let body = document.querySelector('body');
         toggle.onclick = function(){
             toggle.classList.toggle('active');
             superior.classList.toggle('active');
             selector.classList.toggle('active');
             principal.classList.toggle('active');
+        }
+        tema.onclick = function(){
+            body.classList.toggle('oscuro');
         }
             function toggleMenu(){
         let selector = document.querySelector('.selector');

@@ -1,5 +1,0 @@
-*.html linguist-detectable=false
-*.php linguist-detectable=true
-*.py linguist-detectable=true
-*.sol linguist-detectable=true
-*.css linguist-detectable=false

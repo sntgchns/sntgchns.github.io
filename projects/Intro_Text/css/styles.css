@@ -8,7 +8,7 @@
 }
 body
 {
-    background: radial-gradient(#93d9f9, #0c80b5);
+    background: radial-gradient(#adadad, #8c8c8c);
     min-height: 100vh;
     overflow: hidden;
 }
@@ -116,5 +116,5 @@ section
 .textBox .text h2
 {
     font-size: 16vw;
-    color: #fff;
+    color: #fe3231;
 }

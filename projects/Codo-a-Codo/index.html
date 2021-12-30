@@ -7,14 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santiago Soñora</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/styles.css">
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script>
-       function onSubmit(token) {
-         document.getElementById("demo-form").submit();
-       }
-     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="contenedor">
@@ -221,7 +216,7 @@
                     <h2>Contacto</h2>
                     <p>Envíame un mensaje a traves del formulario.</p>
                 </div>
-                <form  id='demo-form' action="enviar.php" class="formulario" method="post">
+                <form id="capform" action="enviar.php" class="formulario" method="post">
                     <div class="fila">
                         <input type="text" id="nombre" class="nombre" name="nombre" placeholder="Nombre" required>
                         <input type="text" id="apellido" class="apellido" name="apellido" placeholder="Apellido" required>
@@ -234,8 +229,9 @@
                         <textarea id="mensaje" class="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                     </div>
                     <div class="fila2">
-                  <input type="submit" class="btn g-recaptcha" data-sitekey="6LeWuNsdAAAAADcxyfSU5dlQEMzxI9Xm3KnQP6zh" data-callback='onSubmit' value="Enviar">
-              </div>
+					<div id='recaptcha' class="g-recaptcha" data-sitekey="6LeWuNsdAAAAADcxyfSU5dlQEMzxI9Xm3KnQP6zh" data-callback="onCompleted" data-size="invisible"></div>
+                        <input type="submit" class="btn" value="Enviar">
+                    </div>
                 </form>
             </section>
 
@@ -245,6 +241,16 @@
             </div>
         </div>
     </div>
+	<script>
+		$('#capform').submit(function(event) {
+			console.log('validación completa.');
+			event.preventDefault(); //evita enviar el form antes que se complete el  captcha
+			grecaptcha.execute();
+		});
+		onCompleted = function() {
+			console.log('captcha completo.');
+		}
+	</script>
     <script>
         let toggle = document.querySelector('.toggle');
         let superior = document.querySelector('.superior');

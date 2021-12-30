@@ -215,7 +215,7 @@
                     <h2>Contacto</h2>
                     <p>Envíame un mensaje a traves del formulario.</p>
                 </div>
-                <form action="enviar.php" class="formulario" method="post">
+                <form id="capform" action="enviar.php" class="formulario" method="post">
                     <div class="fila">
                         <input type="text" id="nombre" class="nombre" name="nombre" placeholder="Nombre" required>
                         <input type="text" id="apellido" class="apellido" name="apellido" placeholder="Apellido" required>
@@ -228,6 +228,7 @@
                         <textarea id="mensaje" class="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
                     </div>
                     <div class="fila2">
+			<div id='recaptcha' class="g-recaptcha" data-sitekey="6LeWuNsdAAAAADcxyfSU5dlQEMzxI9Xm3KnQP6zh" data-callback="onCompleted" data-size="invisible"></div>
                         <input type="submit" class="btn" value="Enviar">
                     </div>
                 </form>
@@ -239,6 +240,22 @@
             </div>
         </div>
     </div>
+	<script>
+  	  document.getElementById("capform").addEventListener("submit", function(event) {
+      	  console.log('form enviado.');	
+      	  if (!grecaptcha.getResponse()) {
+      	      console.log('captcha aún incompleto.');	
+        	    event.preventDefault(); //evita enviar el formulario antes de que se complete el captcha
+        	    grecaptcha.execute();
+        	} else {
+        	    console.log('form enviado.');
+        	}
+    	});	
+    	onCompleted = function() {
+        	console.log('captcha completo.');
+        	document.getElementById("capform").submit();
+    	}
+    </script>
     <script>
         let toggle = document.querySelector('.toggle');
         let superior = document.querySelector('.superior');

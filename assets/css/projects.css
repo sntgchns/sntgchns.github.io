@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{   
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #061D39;
+}
+ul
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+ul li
+{
+    list-style: none;
+    transition: 0.5s;
+}
+ul li a
+{
+    position: relative;
+    color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 1em;
+    padding: 0 10px;
+    line-height: 1.1em;
+}
+ul li a:before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    -webkit-text-stroke: 1px #FF4D5A;
+    transform: translateX(0);
+    transition: 0.5s;
+    pointer-events: none;
+}
+ul li a:hover:before
+{
+    transform: translateX(100%);
+    opacity: 0;
+}
+ul li a:after
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    color: #FFFFFF;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+ul li a:hover:after
+{
+    transform: translateX(0);
+    opacity: 1;
+}
+h1
+{
+    color: #ffc456;    
+    letter-spacing: 2px;
+    font-size: 1.8em;
+    padding: 0 10px;
+    line-height: 1.2em;
+}

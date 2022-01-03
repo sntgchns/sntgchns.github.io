@@ -1,0 +1,114 @@
+@import url('https://api.fontshare.com/css?f[]=general-sans@700&display=swap');
+
+:root {
+  --cream: hsl(38 47% 75%);
+  --black: hsl(20 3% 19%);
+  --red: #ea6962;
+  --orange: #e78a4e;
+  --yellow: #d8a657;
+  --green: #a9b665;
+  --aqua: #89b482;
+	
+	--stripe-deg: -90deg;
+
+	--ff: 'General Sans', sans-serif;
+}
+
+html {
+	font-family: var(--ff);
+	font-size: 100%;
+	block-size: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	text-rendering: optimizeSpeed;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-weight: 700;
+	block-size: 100%;
+	padding: 5vw;
+	display: grid;
+	place-items: center;
+	background-color: var(--cream);
+	color: var(--black);
+}
+
+h1 {
+	font-size: clamp(1rem, 4vw, 6rem);
+	text-transform: uppercase;
+	line-height: 1;
+	display: grid;
+	gap: 1px 0;
+	grid-template-columns: repeat(4, 4ch);
+	position: relative;
+}
+
+h1::before, h1::after {
+	--stripe-deg: 90deg;
+	content: "";
+	position: absolute;
+	width: 8ch;
+	height: 4ch;
+}
+
+h1::before {
+	top: -4ch;
+	right: 0;
+	clip-path: polygon(0 50%, 20% 50%, 20% 20%, 40% 20%, 40% 40%, 60% 40%, 60% 0, 80% 0, 80% 60%,100% 60%, 100% 100%, 0 100%);
+}
+
+h1::after {
+	bottom: -4ch;
+	left: 0;
+	clip-path: polygon(0 0, 0 40%, 20% 40%, 20% 60%, 40% 60%, 40% 40%, 60% 40%, 60% 80%, 80% 80%, 80% 30%, 100% 30%, 100% 100%, 100% 0);
+}
+
+.stripes-top, .stripes-bottom, h1::before, h1::after {
+	background: linear-gradient(var(--stripe-deg), var(--red), 
+    var(--red) 20%,
+    var(--orange) 20%,
+    var(--orange) 40%,
+    var(--yellow) 40%,
+		var(--yellow) 60%,
+		var(--green) 60%,
+		var(--green) 80%,
+		var(--aqua) 80%);
+}
+
+.stripes-top {
+	grid-column: 3 / 5;
+}
+
+.stripes-bottom {
+	grid-column: 1 / 3;
+	grid-row: 3
+}
+
+.theweb {
+	font-size: 1em;
+	grid-column: 1 / 3;
+	grid-row: 1;
+}
+
+.artisan {
+	font-size: 2.215em;
+	grid-column: 1 / 5;
+	grid-row: 2;
+}
+
+.society {
+	font-size: 1.08em;
+	text-indent: .15em;
+	grid-column: 3 / 5;
+}

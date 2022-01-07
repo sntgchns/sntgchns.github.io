@@ -565,12 +565,12 @@ p
 }
 .tema::before
 {
-    content: '\f755';
+    content: '\f186';
     font-family: fontAwesome;
 }
 .oscuro .tema::before
 {
-    content: '\e28f';
+    content: '\f185';
     font-family: fontAwesome;
 }
 .tema::after

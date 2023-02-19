@@ -1,2 +1,2 @@
 # sntgchns.github.io
-Website personal
+Link to personal Website

@@ -86,6 +86,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 7px;
     flex-direction: column;
     min-height: 100vh;
 }
